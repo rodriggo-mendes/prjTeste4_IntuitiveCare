@@ -49,7 +49,7 @@ $(document).ready(function () {
                     reader.readAsText(e.target.files[0]);
 
                     if (e.target.files[0].name != "Relatorio_cadop.csv") {
-                        alert('Por favor, selecione o arquivo "Relatorio_cadop.csv"\n\nCaminho: "teste4/csv/"')
+                        alert('Por favor, selecione o arquivo "Relatorio_cadop.csv"\n\nCaminho: "./csv/"')
                         return
                     }
 
