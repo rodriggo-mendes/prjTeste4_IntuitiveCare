@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <title>Teste 4 | Rodriggo Mendes</title>
+</head>
+<body>
+    <!-- Desenvolvido com a extensão "Live Server" do Visual Studio Code para reproduzir o código dinâmico do Vue.JS -->
+    <main id="app" class="flex-row-display">
+        <div class="main-content-container flex-row-display">
+            <h1>Busca de Operadoras Ativas</h1>
+            <form id="form-busca">
+                <label class="custom-file destaque">
+                    <input id="csv" type="file" accept=".csv" @change="carregarCsv($event)">
+                    Abrir CSV
+                </label>
+                <div class="row">
+                    <input class="input-busca" type="text" v-model="inputOperadora" placeholder="Insira a pesquisa...">
+                    <input class="botao-buscar destaque" type="submit" value="Buscar" @click="buscarOperadoras">
+                </div>
+                <p class="msg"></p>
+            </form>
+        </div>
+
+        <table v-if="parseCsv">
+            <tbody>
+                <tr>
+                    <th v-for="key in parseHeader">
+                        {{ key }}
+                    </th>
+                </tr>
+                <tr v-for="csv in parseCsv">
+                    <td v-for="key in parseHeader">
+                        {{ csv[key] }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/vue@3.2.20"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

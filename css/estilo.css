@@ -1,0 +1,126 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 150ms;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    margin-top: 20px;
+    min-height: 90vh;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 25px;
+}
+
+#form-busca {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#csv {
+    align-self: center;
+    margin-top: 20px;
+}
+
+input[type="file"] {
+    position: absolute; 
+    left: -99999rem;
+}
+
+.destaque {
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #ff7700;
+    color: #ff7700;
+    cursor: pointer;
+}
+
+.destaque:hover {
+    color: white;
+    background-color: #ff7700;
+}
+
+.custom-file {
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    margin-top: 20px;
+    align-self: center;
+    text-align: center;
+}
+
+.flex-row-display {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content-container {
+    width: 500px;
+    height: 200px;
+    border-radius: 35px;
+    border: 0px solid black;
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 20px;
+}
+
+.input-busca {
+    width: 380px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid gray;
+}
+
+.input-busca:focus {
+    outline-width: 0;
+}
+
+.botao-buscar {
+    width: 80px;
+    height: 40px;
+    margin-left: 5px;
+    background-color: white;
+}
+
+.msg {
+    margin-top: 10px;
+    color: red;
+    font-size: 12px;
+}
+
+table {
+    display: block;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.resultado-busca {
+    width: 70vw;
+    max-height: 50vh;
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px;
+    border: 1px solid gray;
+    border-radius: 35px;
+}
+
+.resultado-busca th {
+    margin-bottom: 25px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+    padding-right: 40px;
+}
+
+.resultado-busca td {
+    padding-top: 10px;
+    padding-right: 40px;
+}
